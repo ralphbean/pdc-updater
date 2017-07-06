@@ -9,9 +9,6 @@ log = logging.getLogger(__name__)
 class RetireComponentHandler(pdcupdater.handlers.BaseHandler):
     """ When a component's branch is retired, EOL all it's branches """
 
-    def __init__(self, *args, **kwargs):
-        super(RetireComponentHandler, self).__init__(*args, **kwargs)
-
     @property
     def topic_suffixes(self):
         return ['git.receive']
